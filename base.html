@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<head>
+    <meta charset="UTF-8">
+    <title>E.D.I.T.H BOT</title>
+</head>
+<body>
+    <div class="header">
+        <a href="#default" class="logo">Burgers And BreakFast</a>
+        <div class="header-right">
+          <a class="active" href="#home">Home</a>
+          <a href="#contact">Menu</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
+      <div class="head">
+        <h1 class="m-heading">BURGERS AND BREAKFAST</h1>
+        <p class="p-heading">We operate from a single branch and operate over whole city.</p>
+        <p class="p-heading">We started in 2020 and immediately gain popularity and a place</p>
+        <p class="p-heading">in the Heart of the Customer's through our Breakfast and Dinner</p>
+        <p class="p-heading">Cousiens like(Burgers, pizzas, etc..)</p>
+        <p class="p-heading">DELIVERY - We Deliver within the City through FOODPANDA</p>
+      </div>
+      <div class="polaroid">
+        <div class="container">
+            <img src="/static/images/img2.jpg" alt="5 Terre" style="width:100%">
+        <p>Burgers</p>
+        </div>
+      </div>
+      <div class="polaroid2">
+        <div class="container">
+            <img src="/static/images/img3.jpg" alt="5 Terre" style="width:100%">
+        <p>Pizza</p>
+        </div>
+      </div>
+      <div class="polaroid3">
+        <div class="container">
+            <img src="/static/images/img4.jpg" alt="5 Terre" style="width:100%">
+        <p>Sandwich</p>
+        </div>
+      </div>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="{{ url_for('static', filename='images/Level3.svg') }}" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is E.D.I.T.H. I am here to serve you..</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">SEND</button>
+                <button class="chatbox__send--footer rec__button"><img src="/static/images/mic.png" alt="Rec"></button>
+            </div>
+            
+        </div>
+        <div class="chatbox__button">
+            <button onclick="myalert()"><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script>
+        async function myalert() {
+            alert("Hello from the Team of E.D.I.T.H.\n " +
+                "We are trying our best to make things easy for you..\n" +
+                    "ROMAN is still in BETA!!!");
+        }
+    </script>
+<footer>
+  <p>Developers - Tanseer Adnan / Haziq Mirza / Abdul Basit / Muhammad Maaz<br>
+</footer>
+
+
+</body>
+</html>
